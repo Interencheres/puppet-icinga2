@@ -42,7 +42,7 @@ class icinga2::repo {
       'debian': {
         case $::operatingsystem {
           'debian': {
-            include ::apt, ::apt::backports
+            include ::apt
             apt::source { 'icinga-stable-release':
               location    => 'http://packages.icinga.com/debian',
               release     => "icinga-${::lsbdistcodename}",
